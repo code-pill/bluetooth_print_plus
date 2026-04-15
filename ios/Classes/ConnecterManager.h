@@ -7,9 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+// GSDK headers below are non-modular; suppress the framework-module check so
+// consumers don't need CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES
+// in their Podfile.
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnon-modular-include-in-framework-module"
 #import "BLEConnecter.h"
 #import "EthernetConnecter.h"
 #import "Connecter.h"
+#pragma clang diagnostic pop
 
 /**
  *  @enum ConnectMethod
